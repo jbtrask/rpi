@@ -1,0 +1,7 @@
+{ "run_list":
+    [
+      "recipe[apt_update]",
+      "recipe[hostname]",
+      "recipe[wifi]"
+    ]
+}
