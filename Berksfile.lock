@@ -1,0 +1,13 @@
+{
+  "sources": {
+    "vnc": {
+      "locked_version": "0.0.1"
+    },
+    "x-windows": {
+      "locked_version": "0.0.3"
+    },
+    "gnome": {
+      "locked_version": "0.0.3"
+    }
+  }
+}
