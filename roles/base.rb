@@ -2,14 +2,14 @@ name 'base'
 description 'base role'
 
 run_list %W(
-  recipe[wifi]
-  recipe[bluetooth]
   recipe[apt]
   recipe[monit]
   recipe[openssh]
   recipe[ntp]
   recipe[build-essential]
   recipe[htop]
+  recipe[wifi]
+  recipe[bluetooth]
 )
 
 default_attributes 'openssh' => {

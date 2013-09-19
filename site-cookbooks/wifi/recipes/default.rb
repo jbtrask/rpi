@@ -1,3 +1,6 @@
-execute "install wifi" do
-  command 'cat ~/Dropbox/jbt/docs/raspberry.pi/network.setup.cfg | ssh pi@wired.jbt-pi.local "cat > /tmp/network.cfg && sudo cp /tmp/network.cfg /etc/network/interfaces"'
+template "/etc/network/interfaces" do
+  source "interfaces.erb"
+  group "root"
+  owner "root"
+  mode 00644
 end
