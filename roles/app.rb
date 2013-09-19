@@ -6,9 +6,3 @@ run_list %W(
   recipe[nginx]
   recipe[unicorn]
 )
-
-default_attributes 'collectd' => {
-  'plugins' => {
-      'nginx' => { }
-  }
-}
