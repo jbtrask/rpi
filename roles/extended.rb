@@ -19,4 +19,5 @@ run_list %W(
   recipe[runit]
   recipe[rsyslog::client]
   recipe[rvm::ruby_193]
+  recipe[sudo]
 )
