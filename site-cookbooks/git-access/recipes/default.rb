@@ -1,12 +1,14 @@
 path = "/home/#{node['git-access']['user']}/.ssh"
 
-file "#{path}/config" do
+template "#{path}/config" do
+  source 'config.erb'
   mode '600'
   owner node['git-access']['user']
   group node['git-access']['user']
 end
 
-file "#{path}/known_hosts" do
+template "#{path}/known_hosts" do
+  source 'known_hosts.erb'
   mode '600'
   owner node['git-access']['user']
   group node['git-access']['user']
@@ -21,16 +23,7 @@ end
 
 template "#{path}/github_rsa.pub" do
   source 'github_rsa.pub.erb'
-  mode '600'
+  mode '400'
   owner node['git-access']['user']
   group node['git-access']['user']
-end
-
-ssh_util_known_hosts "github.com" do
-  user node['git-access']['user']
-end
-
-ssh_util_config "github.com" do
-  options 'IdentityFile' => "#{path}/github_rsa"
-  user node['git-access']['user']
 end

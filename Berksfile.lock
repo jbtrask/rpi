@@ -21,9 +21,6 @@
     "vnc": {
       "locked_version": "0.0.1"
     },
-    "ssh-util": {
-      "locked_version": "0.6.3"
-    },
     "imagemagick": {
       "locked_version": "0.2.2"
     },
