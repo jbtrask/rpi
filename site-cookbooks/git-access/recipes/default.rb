@@ -1,29 +1,26 @@
-path = "/home/#{node['git-access']['user']}/.ssh"
+[
 
-template "#{path}/config" do
-  source 'config.erb'
-  mode '600'
-  owner node['git-access']['user']
-  group node['git-access']['user']
-end
+    { name: 'root', path: '/root/.ssh' },
+    { name: node['git-access']['user'], path: "/home/#{node['git-access']['user']}/.ssh" }
 
-template "#{path}/known_hosts" do
-  source 'known_hosts.erb'
-  mode '600'
-  owner node['git-access']['user']
-  group node['git-access']['user']
-end
+].each do |user|
 
-template "#{path}/github_rsa" do
-  source 'github_rsa.erb'
-  mode '400'
-  owner node['git-access']['user']
-  group node['git-access']['user']
-end
+  [
 
-template "#{path}/github_rsa.pub" do
-  source 'github_rsa.pub.erb'
-  mode '400'
-  owner node['git-access']['user']
-  group node['git-access']['user']
+      { name: 'config', mode: '600' },
+      { name: 'known_hosts', mode: '600' },
+      { name: 'github_rsa', mode: '400' },
+      { name: 'github_rsa.pub', mode: '400' }
+
+  ].each do |file|
+
+    template "#{user[:path]}/#{file[:name]}" do
+      source "#{file[:name]}.erb"
+      mode file[:mode]
+      owner user[:name]
+      group user[:name]
+    end
+
+  end
+
 end

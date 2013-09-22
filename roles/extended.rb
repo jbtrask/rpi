@@ -7,6 +7,7 @@ run_list %W(
   recipe[chef-client::service]
   recipe[postfix]
   recipe[vim]
+  recipe[vnc]
   recipe[user::data_bag]
   recipe[logrotate]
   recipe[ohai]

@@ -9,8 +9,7 @@ run_list %W(
   recipe[build-essential]
   recipe[htop]
   recipe[wifi]
-  recipe[bluetooth]
-  recipe[git-access]
+  recipe[vnc]
 )
 
 default_attributes 'openssh' => {
