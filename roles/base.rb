@@ -10,6 +10,7 @@ run_list %W(
   recipe[htop]
   recipe[wifi]
   recipe[bluetooth]
+  recipe[git-access]
 )
 
 default_attributes 'openssh' => {
