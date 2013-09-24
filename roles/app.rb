@@ -7,5 +7,4 @@ run_list %W(
   recipe[unicorn]
   recipe[git-access]
   recipe[bluetooth]
-  recipe[lightz]
 )
