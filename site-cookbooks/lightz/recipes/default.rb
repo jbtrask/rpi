@@ -1,3 +1,5 @@
+include_recipe 'git-access'
+
 user = node['lightz']['user']
 src = "/home/#{user}/#{node['lightz']['source_directory']}"
 project_directory = "#{src}/#{node['lightz']['project_directory']}"
@@ -10,6 +12,8 @@ end
 
 git project_directory do
   repository node['lightz']['repository']
+  user user
+  group user
 end
 
 #execute 'update system gems' do
