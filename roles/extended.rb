@@ -21,4 +21,7 @@ run_list %W(
   recipe[rsyslog::client]
   recipe[rvm::ruby_193]
   recipe[sudo]
+  recipe[nginx]
+  recipe[unicorn]
+  recipe[lightz]
 )
