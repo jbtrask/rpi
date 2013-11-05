@@ -1,0 +1,1 @@
+default['rbenv_pi']['ruby_version'] = '1.9.3-p448'
