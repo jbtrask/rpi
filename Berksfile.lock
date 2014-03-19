@@ -21,14 +21,8 @@
     "imagemagick": {
       "locked_version": "0.2.2"
     },
-    "nginx": {
-      "locked_version": "1.8.0"
-    },
-    "unicorn": {
-      "locked_version": "1.3.0"
-    },
-    "rbenv": {
-      "locked_version": "1.6.5"
+    "vnc": {
+      "locked_version": "0.0.1"
     },
     "iptables": {
       "locked_version": "0.12.0"
@@ -36,23 +30,11 @@
     "yum": {
       "locked_version": "2.3.2"
     },
-    "runit": {
-      "locked_version": "1.2.0"
+    "x-windows": {
+      "locked_version": "0.0.3"
     },
-    "ohai": {
-      "locked_version": "1.1.12"
-    },
-    "git": {
-      "locked_version": "2.6.0"
-    },
-    "dmg": {
-      "locked_version": "2.0.0"
-    },
-    "windows": {
-      "locked_version": "1.10.0"
-    },
-    "chef_handler": {
-      "locked_version": "1.1.4"
+    "gnome": {
+      "locked_version": "0.0.3"
     }
   }
 }
